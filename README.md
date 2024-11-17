@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org) project.
+This is a [Next.js](https://nextjs.org) project for my personal website. I am using Github issues to organize my work.
 
 ## Future Steps
 Will be deployed once the website is mostly done. Currently can only run locally.
