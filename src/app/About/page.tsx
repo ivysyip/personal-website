@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-// import { IconArrowRight } from '@tabler/core';
+import { IconArrowRight } from '@tabler/icons-react';
 
 export default function About() {
     return (
@@ -9,8 +9,7 @@ export default function About() {
                 About Me!
             </h1>
             <ul className="text-lg lg:text-xl py-8">
-                {/* <IconArrowRight/> */}
-                <li>Name: Ivy Yip</li>
+                <li className="flex"><IconArrowRight/><strong>Name: </strong>Ivy Yip</li>
                 <li>School Year: College Freshman</li>
                 <li>School: Massachusetts Institute of Technology {"(MIT)"}</li>
                 <li>Major: 6-3 {"(Computer Science)"} and 18 {"(Applied Mathematics)"}</li>
