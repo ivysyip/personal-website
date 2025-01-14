@@ -1,11 +1,12 @@
-import React from 'react';
-import Navbar from '@/components/Navbar/Navbar'
+"use client";
+import React from "react";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function () {
-    return (
-        <>
-        <Navbar />
-        <p>experiences</p>
-        </>
-    )
+  return (
+    <>
+      <Navbar />
+      <p>experiences</p>
+    </>
+  );
 }

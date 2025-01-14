@@ -1,11 +1,12 @@
-
 "use client";
 import React from "react";
+import Navbar from "@/components/Navbar/Navbar";
 import { IconArrowRight } from "@tabler/icons-react";
 
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen font-[family-name:var(--font-geist-sans)] mx-auto px-12 py-4">
+      <Navbar />
       <h1 className="text-4xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
         About Me!
       </h1>
