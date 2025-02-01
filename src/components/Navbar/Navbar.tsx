@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav>
       <div className="flex flex-wrap items-center justify-between mx-auto p-8">
         <Link href={"/"}>
-          <p>Logo</p>
+          <img src="icon.jpg" className="w-12 h-12 rounded-full" alt="Logo" />
         </Link>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
