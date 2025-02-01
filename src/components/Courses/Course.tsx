@@ -11,9 +11,11 @@ const Course = ({ course }: { course: any }) => {
         }
         target="_blank"
         rel="noopener noreferrer"
+        className="flex gap-2"
       >
-        <p>{course.name}</p>
-        <p>{course.number}</p>
+        <p>
+          {course.name} ({course.number})
+        </p>
       </a>
     </div>
   );
