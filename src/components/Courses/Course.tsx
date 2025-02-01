@@ -1,6 +1,19 @@
 import React from "react";
 
-const Course = ({ course }: { course: any }) => {
+interface CourseLabels {
+  category: string;
+  term: string;
+  core: boolean;
+}
+
+interface CourseType {
+  name: string;
+  number: string;
+  link?: string; // Optional property
+  labels: CourseLabels;
+}
+
+const Course = ({ course }: { course: CourseType }) => {
   return (
     <div>
       <a

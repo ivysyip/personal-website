@@ -4,7 +4,7 @@ import Course from "@/components/Courses/Course";
 import Navbar from "@/components/Navbar/Navbar";
 import { courses } from "@/components/data/courses";
 
-export default function () {
+const Courses = () => {
   const terms = [...new Set(courses.map((course) => course.labels.term))];
   const filterOptions = ["all", ...terms];
 
@@ -38,8 +38,8 @@ export default function () {
               <h2 className="text-lg font-bold mb-2">{category}</h2>
               {filteredCourses
                 .filter((course) => course.labels.category === category)
-                .map((course) => (
-                  <Course course={course} />
+                .map((course, index) => (
+                  <Course key={index} course={course} />
                 ))}
             </div>
           ))}
@@ -47,4 +47,6 @@ export default function () {
       </div>
     </div>
   );
-}
+};
+
+export default Courses;
