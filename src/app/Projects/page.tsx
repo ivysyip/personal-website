@@ -2,11 +2,13 @@
 import React from "react";
 import Navbar from "@/components/Navbar/Navbar";
 
-export default function () {
+const Projects = () => {
   return (
     <div>
       <Navbar />
       <p>projects</p>
     </div>
   );
-}
+};
+
+export default Projects;
