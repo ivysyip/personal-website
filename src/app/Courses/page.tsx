@@ -79,11 +79,9 @@ const Courses = () => {
   ];
 
   return (
-    <div
-      className={`min-h-screen font-[family-name:var(--font-geist-sans)] ${theme}`}
-    >
+    <div className="min-h-[calc(100vh-6rem)] font-[family-name:var(--font-geist-sans)]">
       <Navbar />
-      <div className="flex flex-col mx-auto px-12 py-4">
+      <div className="flex flex-col  mx-auto px-12 py-4 mt-24">
         <div className="flex justify-between items-center mb-4">
           <div className="flex gap-2">
             {filterOptions.map((option) => (
