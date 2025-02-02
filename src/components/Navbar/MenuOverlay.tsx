@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Navlink from "./Navlink";
 import { usePathname } from "next/navigation";
 
