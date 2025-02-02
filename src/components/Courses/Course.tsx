@@ -15,7 +15,7 @@ interface CourseType {
 
 const Course = ({ course }: { course: CourseType }) => {
   return (
-    <div>
+    <div className="hover:bg-red-500/50 hover:border hover:border-red-500 hover:rounded-md transition-all duration-200 p-2">
       <a
         href={
           course.link
