@@ -27,7 +27,7 @@ const Course = ({ course }: { course: CourseType }) => {
         className="flex gap-2"
       >
         <p>
-          {course.name} ({course.number})
+          {course.number} {course.name}
         </p>
       </a>
     </div>

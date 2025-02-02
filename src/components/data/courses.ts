@@ -46,7 +46,7 @@ export const courses = [
     },
   },
   {
-    name: "Web.lab",
+    name: "Web.lab (IAP)",
     number: "6.9620",
     labels: {
       category: "Software",
