@@ -42,14 +42,14 @@ const Navbar = () => {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
-              className="flex items-center px-3 py-2 text-slate-200 hover:text-white "
+              className="flex items-center px-3 py-2 text-slate-800 dark:text-slate-200"
             >
               <IconMenu2 className="h-7 w-7" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(!navbarOpen)}
-              className="flex items-center px-3 py-2 text-slate-200 hover:text-white "
+              className="flex items-center px-3 py-2 text-slate-800 dark:text-slate-200"
             >
               <IconX className="h-7 w-7" />
             </button>

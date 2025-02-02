@@ -80,7 +80,7 @@ const Courses = () => {
 
   return (
     <div
-      className={`min-h-screen font-[family-name:var(--font-geist-sans)] ${theme}`}
+      className={`min-h-[calc(100vh-6rem)] font-[family-name:var(--font-geist-sans)] ${theme}`}
     >
       <Navbar />
       <div className="flex flex-col  mx-auto px-12 py-4 mt-24">
