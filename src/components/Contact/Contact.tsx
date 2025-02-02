@@ -12,12 +12,16 @@ const Contacts = () => {
         fgColor="currentColor"
         bgColor="transparent"
         url="https://www.linkedin.com/in/ivy-yip-5880ab329/"
+        target="_blank"
+        rel="noopener noreferrer"
       />
       <SocialIcon
         className="transition-transform transform hover:scale-110 hover:opacity-80"
         fgColor="currentColor"
         bgColor="transparent"
         url="https://github.com/ivysyip"
+        target="_blank"
+        rel="noopener noreferrer"
       />
       <SocialIcon
         className="transition-transform transform hover:scale-110 hover:opacity-80"
