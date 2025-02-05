@@ -1,14 +1,23 @@
-"use client";
-import React from "react";
-import Navbar from "@/components/Navbar/Navbar";
+import { getAllMarkdownFiles } from "@/lib/markdown";
+// import Link from "next/link";
+import Navbar from "../../components/Navbar/Navbar";
+import Project from "@/components/Projects/Project";
 
-const Projects = () => {
+export default function ProjectsPage() {
+  const posts = getAllMarkdownFiles();
+
   return (
-    <div>
+    <div className="min-h-[calc(100vh-6rem)] font-[family-name:var(--font-geist-sans)]">
       <Navbar />
-      <p>projects</p>
+      <div className="flex flex-col  mx-auto px-12 py-4 mt-24">
+        <ul>
+          {posts.map((post) => (
+            <li key={post.metadata.date}>
+              <Project post={post} />
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
-};
-
-export default Projects;
+}
