@@ -9,6 +9,11 @@ export interface MarkdownData {
   metadata: {
     title: string;
     date: string;
+    external: string;
+    github: string;
+    tags: string[];
+    photo: string;
+    file: string;
   };
   contentHtml: string;
 }

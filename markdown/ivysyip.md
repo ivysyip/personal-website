@@ -2,9 +2,12 @@
 title: "ivysyip.me"
 date: "3"
 external: "https://www.ivysyip.me"
-github: "https://github.com/weblab-class/HOUOH9772-ivysyip-saltyquackerd"
+github: "https://github.com/ivysyip/personal-website"
+file: ""
+photo: "ivysyip-website.png"
 tags:
   - Tailwind CSS
   - Next.js
   - Typescript
+  - Web
 ---

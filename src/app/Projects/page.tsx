@@ -1,6 +1,7 @@
 import { getAllMarkdownFiles } from "@/lib/markdown";
-import Link from "next/link";
+// import Link from "next/link";
 import Navbar from "../../components/Navbar/Navbar";
+import Project from "@/components/Projects/Project";
 
 export default function ProjectsPage() {
   const posts = getAllMarkdownFiles();
@@ -11,10 +12,8 @@ export default function ProjectsPage() {
       <div className="flex flex-col  mx-auto px-12 py-4 mt-24">
         <ul>
           {posts.map((post) => (
-            <li key={post.slug}>
-              <Link href={`/projects/${post.slug}`}>
-                {post.metadata.title} - {post.metadata.date}
-              </Link>
+            <li key={post.metadata.date}>
+              <Project post={post} />
             </li>
           ))}
         </ul>
