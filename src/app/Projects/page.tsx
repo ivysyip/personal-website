@@ -2,7 +2,6 @@ import {
   getAllMarkdownFiles,
   MarkdownData,
 } from "../../../public/lib/markdown";
-import Project from "@/components/Projects/Project";
 import Navbar from "@/components/Navbar/Navbar";
 import FilterableProjects from "@/components/Projects/FilterableProjects";
 
