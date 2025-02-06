@@ -1,45 +1,43 @@
 "use server";
-import fs from "fs/promises";
+import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-
-export interface MarkdownMetadata {
-  title: string;
-  date: string;
-  external?: string;
-  github?: string;
-  tags: string[];
-  file?: string;
-  description: string;
-}
+import { remark } from "remark";
+import html from "remark-html";
 
 export interface MarkdownData {
   slug: string;
-  metadata: MarkdownMetadata;
+  metadata: {
+    title: string;
+    date: string;
+    external: string;
+    github: string;
+    tags: string[];
+    file: string;
+    description: string;
+  };
+  contentHtml: string;
 }
 
 const MARKDOWN_DIR = path.join(process.cwd(), "markdown");
 
 export async function getAllMarkdownFiles(): Promise<MarkdownData[]> {
-  try {
-    const files = await fs.readdir(MARKDOWN_DIR);
+  const files = fs.readdirSync(MARKDOWN_DIR);
 
-    const posts = await Promise.all(
-      files.map(async (filename) => {
-        const filePath = path.join(MARKDOWN_DIR, filename);
-        const fileContents = await fs.readFile(filePath, "utf8");
-        const { data } = matter(fileContents);
+  return await Promise.all(
+    files.map(async (filename) => {
+      const filePath = path.join(MARKDOWN_DIR, filename);
+      const fileContents = fs.readFileSync(filePath, "utf8");
 
-        return {
-          slug: filename.replace(".md", ""),
-          metadata: data as MarkdownMetadata,
-        };
-      })
-    );
+      const { data, content } = matter(fileContents);
+      const processedContent = await remark().use(html).process(content);
+      const contentHtml = processedContent.toString();
 
-    return posts;
-  } catch (error) {
-    console.error("Error reading markdown files:", error);
-    return [];
-  }
+      return {
+        slug: filename.replace(".md", ""),
+        metadata: data as MarkdownData["metadata"],
+        contentHtml,
+      };
+    })
+  );
 }

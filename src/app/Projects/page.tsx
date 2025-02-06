@@ -10,39 +10,36 @@ export default function ProjectsPage() {
   const [filteredPosts, setFilteredPosts] = useState<MarkdownData[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
+  // Fetch markdown files (server action)
   useEffect(() => {
-    const fetchPosts = async () => {
-      const fetchedPosts = await getAllMarkdownFiles();
-      setPosts(fetchedPosts);
-      setFilteredPosts(fetchedPosts);
-    };
-
+    async function fetchPosts() {
+      const data = await getAllMarkdownFiles();
+      setPosts(data);
+      setFilteredPosts(data);
+    }
     fetchPosts();
   }, []);
 
+  // Extract unique tags
   const allTags: string[] = [
     ...new Set(posts.flatMap((post) => post.metadata.tags)),
   ];
 
+  // Toggle tag selection
   const toggleTag = (tag: string) => {
-    setSelectedTags((prevTags) =>
-      prevTags.includes(tag)
-        ? prevTags.filter((t) => t !== tag)
-        : [...prevTags, tag]
+    const newTags = selectedTags.includes(tag)
+      ? selectedTags.filter((t) => t !== tag)
+      : [...selectedTags, tag];
+
+    setSelectedTags(newTags);
+    setFilteredPosts(
+      newTags.length === 0
+        ? posts
+        : posts.filter((post) =>
+            post.metadata.tags.some((tag) => newTags.includes(tag))
+          )
     );
   };
-
-  useEffect(() => {
-    if (selectedTags.length === 0) {
-      setFilteredPosts(posts);
-    } else {
-      setFilteredPosts(
-        posts.filter((post) =>
-          post.metadata.tags.some((tag) => selectedTags.includes(tag))
-        )
-      );
-    }
-  }, [selectedTags, posts]);
 
   return (
     <div className="min-h-[calc(100vh-6rem)] font-[family-name:var(--font-geist-sans)]">
