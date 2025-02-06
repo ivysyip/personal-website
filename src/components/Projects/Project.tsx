@@ -1,7 +1,7 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons/component";
 import { IconLink } from "@tabler/icons-react";
-import { MarkdownData } from "@/lib/markdown";
+import { MarkdownData } from "../../../public/lib/markdown";
 import "react-social-icons/github";
 
 const Project = ({ post }: { post: MarkdownData }) => {

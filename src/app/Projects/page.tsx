@@ -1,6 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import { getAllMarkdownFiles, MarkdownData } from "@/lib/markdown";
+import {
+  getAllMarkdownFiles,
+  MarkdownData,
+} from "../../../public/lib/markdown";
 // import Link from "next/link";
 import Navbar from "../../components/Navbar/Navbar";
 import Project from "@/components/Projects/Project";
