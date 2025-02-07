@@ -6,7 +6,7 @@ import "react-social-icons/github";
 
 const Project = ({ post }: { post: MarkdownData }) => {
   return (
-    <div className="relative w-full border border-gray-300 shadow-lg rounded-lg overflow-hidden h-[300px] flex flex-col">
+    <div className="relative w-full border bg-purple-200 dark:bg-purple-900/50 border-purple-700 dark:border-purple-500 shadow-lg rounded-lg overflow-hidden h-[300px] flex flex-col">
       <div className="p-4 flex flex-col flex-grow">
         <div className="flex justify-between items-center min-h-[48px] ">
           <h2 className="text-xl font-bold">{post.metadata.title}</h2>
@@ -42,7 +42,7 @@ const Project = ({ post }: { post: MarkdownData }) => {
           {post.metadata.tags.map((tag, index) => (
             <a
               key={index}
-              className="px-3 py-1 text-sm dark:text-yellow-300 dark:bg-yellow-900/50 rounded-full transition"
+              className="px-3 py-1 text-sm text-yellow-700 bg-yellow-200 dark:text-yellow-300 dark:bg-yellow-900/50 rounded-full transition"
             >
               {tag}
             </a>
