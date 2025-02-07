@@ -16,12 +16,10 @@ export default function FilterableProjects({
           post.metadata.tags.some((tag) => selectedTags.includes(tag))
         );
 
-  // Get unique tags
   const allTags = [...new Set(posts.flatMap((post) => post.metadata.tags))];
 
   return (
     <div className="px-6">
-      {/* Tag Filters */}
       <div className="flex flex-wrap gap-2 justify-center my-4">
         {allTags.map((tag) => (
           <button
@@ -35,8 +33,8 @@ export default function FilterableProjects({
             }
             className={`px-3 py-1 rounded-full text-sm transition ${
               selectedTags.includes(tag)
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-gray-800"
+                ? "bg-red-500/50 border border-red-500 rounded-full"
+                : "bg-gray-300 dark:bg-gray-800 hover:bg-red-300/50 hover:border hover:border-red-300 rounded-full"
             }`}
           >
             {tag}
@@ -44,7 +42,6 @@ export default function FilterableProjects({
         ))}
       </div>
 
-      {/* Projects Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => <Project key={post.slug} post={post} />)
