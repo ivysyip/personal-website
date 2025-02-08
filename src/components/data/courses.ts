@@ -56,6 +56,15 @@ export const courses = [
     link: "https://weblab.mit.edu/",
   },
   {
+    name: "Linear Algebra (ASE)",
+    number: "18.06",
+    labels: {
+      category: "Math + Theory",
+      term: "Spring '25",
+      core: false,
+    },
+  },
+  {
     name: "Intro to ML",
     number: "6.3900",
     labels: {
@@ -63,6 +72,7 @@ export const courses = [
       term: "Spring '25",
       core: true,
     },
+    link: "https://introml.mit.edu/",
   },
   {
     name: "Intro to Algorithms",

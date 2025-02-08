@@ -1,6 +1,6 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons/component";
-import { IconLink } from "@tabler/icons-react";
+import { IconLink, IconFile } from "@tabler/icons-react";
 import { MarkdownData } from "../../../public/lib/markdown";
 import "react-social-icons/github";
 
@@ -31,11 +31,21 @@ const Project = ({ post }: { post: MarkdownData }) => {
                 <IconLink size={24} />
               </a>
             )}
+            {post.metadata.file && (
+              <a
+                href={post.metadata.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 transition-transform transform hover:scale-110 hover:opacity-80"
+              >
+                <IconFile size={24} />
+              </a>
+            )}
           </div>
         </div>
 
         <div className="mt-2 prose max-w-none flex-grow overflow-hidden">
-          <p className="line-clamp-3">{post.metadata.description}</p>
+          <p>{post.metadata.description}</p>
         </div>
 
         <div className="mt-auto flex flex-wrap gap-2">
