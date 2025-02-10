@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { ReactTyped } from "react-typed";
 
 const HomePageAbout = () => {
   return (
@@ -14,6 +16,16 @@ const HomePageAbout = () => {
         I&apos;m a freshman at the Massachusetts Institute of Technology
         studying CS and Math.
       </p>
+      <div className="text-2xl lg:text-4xl">
+        I'm a{" "}
+        <ReactTyped
+          strings={["programmer", "fullstack developer", "AI/ML enthusiast"]}
+          className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"
+          typeSpeed={70}
+          backSpeed={50}
+          loop
+        />
+      </div>
     </div>
   );
 };
