@@ -13,11 +13,7 @@ const Navlink = ({
   return (
     <Link
       href={href}
-      className={`block py-2 pr-2 pl-2 sm:text-xl rounded-lg transition-colors ${
-        selected === href
-          ? "bg-gradient-to-r from-blue-400 to-purple-400 text-white"
-          : "text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-      }`}
+      className={`block py-2 pr-2 pl-2 sm:text-xl rounded-lg transition-colors text-gray-700 dark:text-gray-300 hover:text-gray-500`}
     >
       {title}
     </Link>
