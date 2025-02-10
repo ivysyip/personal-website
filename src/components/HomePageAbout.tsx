@@ -17,7 +17,7 @@ const HomePageAbout = () => {
         studying CS and Math.
       </p>
       <div className="text-2xl lg:text-4xl">
-        I'm a{" "}
+        I&apos;m a{" "}
         <ReactTyped
           strings={["programmer", "fullstack developer", "AI/ML enthusiast"]}
           className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"

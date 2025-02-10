@@ -1,15 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Navlink = ({
-  href,
-  title,
-  selected,
-}: {
-  href: string;
-  title: string;
-  selected: string;
-}) => {
+const Navlink = ({ href, title }: { href: string; title: string }) => {
   return (
     <Link
       href={href}
