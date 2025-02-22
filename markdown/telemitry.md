@@ -1,7 +1,7 @@
 ---
 title: "TeleMITry"
 date: "5"
-external: ""
+external: "https://fsae-telemetry.mit.edu/"
 github: ""
 file: ""
 description: "Telemetry Website for MIT Motorsports"
