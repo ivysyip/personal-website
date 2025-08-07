@@ -12,6 +12,7 @@ export interface MarkdownData {
     date: string;
     external: string;
     github: string;
+    youtube: string;
     tags: string[];
     file: string;
     description: string;

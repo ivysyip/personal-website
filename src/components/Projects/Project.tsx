@@ -1,6 +1,10 @@
 import React from "react";
 import { SocialIcon } from "react-social-icons/component";
-import { IconLink, IconFile } from "@tabler/icons-react";
+import {
+  IconLink,
+  IconFile,
+  IconBrandYoutubeFilled,
+} from "@tabler/icons-react";
 import { MarkdownData } from "../../../public/lib/markdown";
 import "react-social-icons/github";
 
@@ -39,6 +43,16 @@ const Project = ({ post }: { post: MarkdownData }) => {
                 className="flex items-center gap-3 transition-transform transform hover:scale-110 hover:opacity-80"
               >
                 <IconFile size={24} />
+              </a>
+            )}
+            {post.metadata.youtube && (
+              <a
+                href={post.metadata.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 transition-transform transform hover:scale-110 hover:opacity-80"
+              >
+                <IconBrandYoutubeFilled size={24} />
               </a>
             )}
           </div>
