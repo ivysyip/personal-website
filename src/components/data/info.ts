@@ -5,7 +5,7 @@ export const aboutInfo = [
   },
   {
     category: "School Year",
-    info: "College Freshman",
+    info: "Rising Sophomore",
   },
   {
     category: "School",
@@ -13,7 +13,7 @@ export const aboutInfo = [
   },
   {
     category: "Major",
-    info: "6-3 (Computer Science) and 18 (Applied Mathematics)",
+    info: "6-3 (Computer Science) and 18 (General Mathematics)",
   },
   {
     category: "Hometown",
