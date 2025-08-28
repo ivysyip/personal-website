@@ -7,7 +7,7 @@ export const courses = [
       term: "Fall '24",
       core: true,
     },
-    link: "https://py.mit.edu/fall24",
+    link: "https://py.mit.edu",
   },
   {
     name: "Discrete Math",
@@ -93,20 +93,48 @@ export const courses = [
     },
   },
   {
-    name: "Principles of Microeconomics",
-    number: "14.01",
-    labels: {
-      category: "Economics",
-      term: "Spring '25",
-      core: false,
-    },
-  },
-  {
     name: "Electricity and Magnetism",
     number: "8.02",
     labels: {
       category: "General Requirements + Other",
       term: "Spring '25",
+      core: false,
+    },
+  },
+  {
+    name: "Design and Analysis of Algorithms",
+    number: "6.1220",
+    labels: {
+      category: "Math + Theory",
+      term: "Fall '25",
+      core: true,
+    },
+  },
+  {
+    name: "Machine Learning (graduate level)",
+    number: "6.7900",
+    labels: {
+      category: "AI/ML",
+      term: "Fall '25",
+      core: true,
+    },
+    link: "https://gradml.mit.edu/",
+  },
+  {
+    name: "Fundamentals of Statistics",
+    number: "18.650",
+    labels: {
+      category: "Math + Theory",
+      term: "Fall '25",
+      core: true,
+    },
+  },
+  {
+    name: "Korean I",
+    number: "21G.901",
+    labels: {
+      category: "General Requirements + Other",
+      term: "Fall '25",
       core: false,
     },
   },

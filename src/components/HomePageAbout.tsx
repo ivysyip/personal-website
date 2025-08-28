@@ -13,7 +13,7 @@ const HomePageAbout = () => {
         <span>Welcome to my Website!</span>
       </h1>
       <p className="text-lg lg:text-xl">
-        I&apos;m a freshman at the Massachusetts Institute of Technology
+        I&apos;m a rising sophomore at the Massachusetts Institute of Technology
         studying CS and Math.
       </p>
       <div className="text-2xl lg:text-4xl">
