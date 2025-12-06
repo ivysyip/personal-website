@@ -111,14 +111,14 @@ export const courses = [
     },
   },
   {
-    name: "Machine Learning (graduate level)",
-    number: "6.7900",
+    name: "Deep Learning (G)",
+    number: "6.7960",
     labels: {
       category: "AI/ML",
       term: "Fall '25",
       core: true,
     },
-    link: "https://gradml.mit.edu/",
+    link: "https://deeplearning6-7960.github.io/",
   },
   {
     name: "Fundamentals of Statistics",
@@ -132,6 +132,15 @@ export const courses = [
   {
     name: "Korean I",
     number: "21G.901",
+    labels: {
+      category: "General Requirements + Other",
+      term: "Fall '25",
+      core: false,
+    },
+  },
+  {
+    name: "Intro to Western Music",
+    number: "21M.011",
     labels: {
       category: "General Requirements + Other",
       term: "Fall '25",
